@@ -1,58 +1,73 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Fatigue</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="homeContainer">
 
-      <div class="nav">
-          <a href="index.html"><img src="http://assets.stickpng.com/images/584abf102912007028bd9332.png"></a>
-          <div class="navBar">
-            <a href="about.html">About</a>
-            <a href="problem.html">Problem</a>
-            <a href="solution.html">Solution</a>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom Fatigue</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="homeContainer">
+    <!--Logo and Nav Bar Div-->
+    <div class="nav">
+      <a href="index.html"><img src="logo.png"></a>
+      <div class="navBar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="problem.html">Problem</a>
+        <a href="solution.html">Solution</a>
       </div>
+    </div>
+    <!-- title -->
+    <div class="title">
+      <h1>Zoom Fatigue</h1>
+    </div>
+    <!-- image on the banner -->
+    <div class="image">
 
-      <div class="title">
-          <h1>Zoom Fatigue</h1>
-      </div>
+    </div>
+    <!-- empty space to the left of the offset div -->
+    <div class="blank">
 
-      <div class="image">
+    </div>
+    <!-- div introducing zoom fatigue (about page) -->
+    <div class="offset rellax" data-rellax-speed="10">
 
-      </div>
-
-      <div class="blank">
-
-      </div>
-
-      <div class="offset">
-
-          <img class="smallImg" src="http://static1.squarespace.com/static/58c32ea2f5e23157c09ee19d/599c4929e6f2e1aeb8d5803e/5f0378840f2c6a4cd3fc2bc1/1594063475335/Zoom+Fatigue.jpg?format=1500w" alt="">
-          <div class="aboutIntro">
-            <h2>What is it?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a class="buttons" href="about.html">Learn More</a>
-          </div>
-
-      </div>
-
-      <div class="intro1">
-          <h2>Problem</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="buttons" href="problem.html">Learn More</a>
-      </div>
-
-      <div class="intro2">
-        <h2>Solution</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a class="buttons" href="solution.html">Learn More</a>
+      <img class="smallImg" src="about.png">
+      <div class="aboutIntro">
+        <h2>What is it?</h2>
+        <p>Virtual meetings have been a great way for people to socialize while
+          following social distancing protocols. However, the rise in video
+          conferences often results in  “Zoom Fatigue” which describes the tiredness,
+          worry, or burnout after prolonged video chats.</p>
+        <a class="buttons" href="about.html">Learn More</a>
       </div>
 
     </div>
-  </body>
+    <!-- div introducting the problems and solutions page -->
+    <div class="intro1">
+      <h2>Problem</h2>
+      <p>The increase in the amount of eye contact people receive on Zoom calls
+        can be stressful. Everyone is looking at each other nonstop.</p>
+      <a class="buttons" href="problem.html">Learn More</a>
+    </div>
+
+    <div class="intro2">
+      <h2>Solution</h2>
+      <p>Leave 10-15 minutes between calls to take a break. Bathroom breaks do
+        not count. Stand up and walk around.</p>
+      <a class="buttons" href="solution.html">Learn More</a>
+    </div>
+
+  </div>
+
+<!-- rellax (parallax js libary) -->
+  <script src="relax-master/relax.min.js" charset="utf-8"></script>
+  <script>
+  var rellax = new Rellax('.rellax');
+  </script>
+</body>
+
 </html>

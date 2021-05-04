@@ -14,69 +14,79 @@ body {
 .homeContainer {
   display: grid;
   grid-template-columns: .1fr 1fr 1fr;
-  grid-template-rows: .5fr 10fr 10fr 9fr;
+  grid-template-rows: .5fr 9fr 10fr 9fr;
   grid-template-areas:
     "nav nav nav"
-    "title title image"
+    "blank title image"
     "blank offset offset"
     "blank intro1 intro2";
   margin: 2em 0 2em 2em;
-  height: 250vh;
+  /* height: 250vh; */
 }
 
+/* using flex to spread out the logo and the nav bar */
 .nav {
   grid-area: nav;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* styling the logo */
 .nav img {
   object-fit: cover;
-  height: 2.5vw;
-  width: 2.5vw;
   object-position: center;
+  height: 5vw;
+  width: 5vw;
 }
 
+/* styling the nav bar */
 .navBar {
   margin-right: 2em;
 }
 
 .nav a {
   text-decoration: none;
-  color: #A1ACA3;
   padding: 0 2em 0 2em;
   font-size: 1.1em;
 }
 
 .nav a:hover {
-  color: #FFB700;
+  color: #b5651d;
 }
 
+.nav a:active {
+  color: #fff;
+}
+
+/* styling the title */
 .title {
   grid-area: title;
   display: flex;
   align-items: center;
-  padding-left: 3em;
+  /* padding-left: 3em; */
   font-size: 3em;
 }
 
 .title h1 {
   margin: 0;
-  color: #A1ACA3;
 }
 
+/* styling the image on the home page */
 .image {
   grid-area: image;
-  background-image: url('https://dispatch.m.io/wp-content/uploads/2021/02/Combat-Zoom-fatigue-642x425.png');
+  background-image: url('home.png');
   background-size: cover;
   background-position: center center;
 }
 
+/* naming the empty div for grid-template-areas */
 .blank {
   grid-area: blank;
 }
 
+/* styling the offset box in the home page */
 .offset {
   grid-area: offset;
   background-color: #A6CEC0;
@@ -84,8 +94,10 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  z-index: 1;
 }
 
+/* styling the text in the "offset" div */
 .aboutIntro {
   width: 40vw;
 }
@@ -94,16 +106,18 @@ body {
   margin-bottom: 3em;
 }
 
+/* styling the texts used */
 h2 {
   font-size: 2.5em;
 }
 
 p {
   text-align: justify;
-  font-size: 1.2em;
+  font-size: 1.5em;
   line-height: 1.7em;
 }
 
+/* styling the buttons on the home page */
 .buttons {
   text-decoration: none;
   font-size: 1.2em;
@@ -119,6 +133,7 @@ p {
   color: #3D3126
 }
 
+/* styling the smaller images on each page */
 .smallImg {
   object-fit: cover;
   height: 30vw;
@@ -126,6 +141,7 @@ p {
   object-position: center;
 }
 
+/* labeling the intros on the bottom of the home page */
 .intro1 {
   grid-area: intro1;
 }
@@ -139,30 +155,153 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30vw;
+  padding: 0 10vw 0 7vw;
 }
 
-.nav, .title, .aboutIntro h2, .intro1 h2, .intro2 h2 {
+.intro1 p, .intro2 p {
+  padding-bottom: 2em;
+}
+
+/* giving the text a specific google font */
+.nav, .title, h2 {
   font-family: 'Livvic', sans-serif;
 }
 
-.aboutIntro p, .aboutIntro a, .intro1, p, .intro1 a, .intro2 p, .intro2 a {
+p, a, li {
   font-family: 'Didact Gothic', sans-serif;
 }
 
-.nav a, .title h1, .aboutIntro h2, .intro1 h2, .intro2 h2, .aboutIntro p, .intro1, p, .intro2 p{
+/* giving the texts a brown color */
+h1, h2, a, p, li {
   color: #3D3126;
 }
 
-.aboutContainer {
+/* ------ABOUT PAGE------ */
+
+/* changing the background color */
+.aboutBody {
+  margin: 0;
+  background-color: #B8DAE6;
+}
+
+/* setting up the grid */
+.aboutBody .homeContainer {
   display: grid;
   grid-template-columns: .1fr 1fr 1fr;
-  grid-template-rows: .5fr 10fr 10fr 9fr;
+  grid-template-rows: .5fr 9fr 5fr 9fr;
   grid-template-areas:
     "nav nav nav"
-    "title title image"
+    "blank title aboutimg"
     "blank offset offset"
     "blank offset offset";
   margin: 2em 0 2em 2em;
-  height: 250vh;
+  /* height: 250vh; */
+}
+
+/* styling the image on the about page */
+.aboutimage {
+  grid-area: aboutimg;
+  background-image: url('aboutimg.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* adding padding to the text*/
+.aboutInfo {
+  padding: 3em 7em 3em 7em;
+}
+
+/* styling the list under "signs and symptoms..." */
+li {
+  text-align: justify;
+  font-size: 1.5em;
+  line-height: 1.7em;
+}
+
+/* ------PROBLEM PAGE------ */
+
+/* changing the background color */
+.problemBody {
+  margin: 0;
+  background-color: #BACAE1;
+}
+
+/* setting up the grid */
+.problemBody .homeContainer {
+  display: grid;
+  grid-template-columns: .1fr 1fr 1fr;
+  grid-template-rows: .5fr 9fr 15fr;
+  grid-template-areas:
+    "nav nav nav"
+    "blank title problemimg"
+    "blank offset offset";
+  margin: 2em 0 2em 2em;
+}
+
+/* styling the image on the problem page */
+.problemimage {
+  grid-area: problemimg;
+  background-image: url('problemimg.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* styling the offset on the problem page */
+.problemoffset {
+  grid-area: offset;
+  background-color: #F9E1AB;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 7em;
+  padding: 3em 7em 3em 7em;
+}
+
+/* styling the content within the "problemoffset" div */
+.problemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.problemInfo img {
+  text-align: center;
+}
+
+/* ------SOLUTION PAGE------ */
+
+/* changing the background color */
+.solutionBody {
+  margin: 0;
+  background-color: #C1B9EE;
+}
+
+/* setting up the grid */
+.solutionBody .homeContainer {
+  display: grid;
+  grid-template-columns: .1fr 1fr 1fr;
+  grid-template-rows: .5fr 9fr 15fr;
+  grid-template-areas:
+    "nav nav nav"
+    "blank title solutionimg"
+    "blank offset offset";
+  margin: 2em 0 2em 2em;
+}
+
+/* styling the image on the solution page */
+.solutionimage {
+  grid-area: solutionimg;
+  background-image: url('solution.png');
+  background-size: cover;
+  background-position: center center;
+}
+
+/* styling the offset box on the home page */
+.solutionoffset {
+  grid-area: offset;
+  background-color: #D9C7FE;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 7em;
+  padding: 3em 7em 3em 7em;
 }
